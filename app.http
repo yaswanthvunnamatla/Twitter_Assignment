@@ -1,0 +1,65 @@
+POST http://localhost:7887/register/
+Content-Type: application/json
+
+{
+  "username": "yaswanth_vunnamatla",
+  "password": "yaswanth@123",
+  "name": "Yaswanth Vunnamatla",
+  "gender": "male"
+}
+
+###
+
+POST http://localhost:7887/login/
+Content-Type: application/json
+
+{
+  "username": "yaswanth_vunnamatla",
+  "password": "yaswanth@123"
+}
+
+###
+
+GET http://localhost:7887/user/tweets/feed/
+Authorization: BEARER eyJhbGciOiJIUzI1NiJ9.eWFzd2FudGhfdnVubmFtYXRsYQ.tC_nmsKiWri4wEAObpXSqtTvubQwrPqQo66t2X_HKLk
+
+GET http://localhost:7887/user/following/
+Authorization: BEARER eyJhbGciOiJIUzI1NiJ9.eWFzd2FudGhfdnVubmFtYXRsYQ.tC_nmsKiWri4wEAObpXSqtTvubQwrPqQo66t2X_HKLk
+
+GET http://localhost:7887/user/followers/
+Authorization: BEARER eyJhbGciOiJIUzI1NiJ9.eWFzd2FudGhfdnVubmFtYXRsYQ.tC_nmsKiWri4wEAObpXSqtTvubQwrPqQo66t2X_HKLk
+
+###
+
+GET http://localhost:7887/tweets/1/
+Authorization: BEARER eyJhbGciOiJIUzI1NiJ9.eWFzd2FudGhfdnVubmFtYXRsYQ.tC_nmsKiWri4wEAObpXSqtTvubQwrPqQo66t2X_HKLk
+
+###
+
+GET http://localhost:7887/tweets/1/likes
+Authorization: BEARER eyJhbGciOiJIUzI1NiJ9.eWFzd2FudGhfdnVubmFtYXRsYQ.tC_nmsKiWri4wEAObpXSqtTvubQwrPqQo66t2X_HKLk
+
+###
+
+GET http://localhost:7887/tweets/3/replies
+Authorization: BEARER eyJhbGciOiJIUzI1NiJ9.eWFzd2FudGhfdnVubmFtYXRsYQ.tC_nmsKiWri4wEAObpXSqtTvubQwrPqQo66t2X_HKLk
+
+###
+
+GET http://localhost:7887/user/tweets
+Authorization: BEARER eyJhbGciOiJIUzI1NiJ9.eWFzd2FudGhfdnVubmFtYXRsYQ.tC_nmsKiWri4wEAObpXSqtTvubQwrPqQo66t2X_HKLk
+
+###
+
+POST http://localhost:7887/user/tweets
+Authorization: BEARER eyJhbGciOiJIUzI1NiJ9.eWFzd2FudGhfdnVubmFtYXRsYQ.tC_nmsKiWri4wEAObpXSqtTvubQwrPqQo66t2X_HKLk
+Content-Type: application/json
+
+{
+   "tweet": "The Mornings..."
+}
+
+###
+
+DELETE http://localhost:7887/tweets/19/
+Authorization: BEARER eyJhbGciOiJIUzI1NiJ9.eWFzd2FudGhfdnVubmFtYXRsYQ.tC_nmsKiWri4wEAObpXSqtTvubQwrPqQo66t2X_HKLk
